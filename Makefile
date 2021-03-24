@@ -94,3 +94,8 @@ install: $(XD) $(CLI)
 	$(MKDIR) $(PREFIX)/bin
 	$(INSTALL) XD $(PREFIX)/bin
 	$(CPLINK) $(CLI) $(PREFIX)/bin
+
+LATEST_TAG=$(shell git describe --tags | cut -c 2-)
+dist:
+	git archive --format=tar.gz -9 --worktree-attributes \
+		--prefix=xd_$(LATEST_TAG)/ v$(LATEST_TAG) -o xd_$(LATEST_TAG).orig.tar.gz
