@@ -2,11 +2,10 @@ Source: xd
 Section: net
 Priority: optional
 Maintainer: r4sas <r4sas@i2pmail.org>
-Build-Depends: debhelper-compat (= 12),
+Build-Depends: debhelper (>= 9~),
                dh-apparmor,
                dh-golang
-Standards-Version: 4.5.0.2
-Rules-Requires-Root: no
+Standards-Version: 3.9.8
 Homepage: https://xd-torrent.github.io/
 Vcs-Git: git://github.com/majestrate/XD.git
 Vcs-Browser: https://github.com/majestrate/XD
