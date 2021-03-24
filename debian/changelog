@@ -1,3 +1,9 @@
+xd (0.4.0-1) unstable; urgency=low
+
+  * release 0.4.0
+
+ -- r4sas <r4sas@i2pmail.org>  Wed, 24 Mar 2021 16:00:00 +0000
+
 xd (0.1.0~pre4-1) unstable; urgency=low
 
   * initial release 0.1.0-pre4

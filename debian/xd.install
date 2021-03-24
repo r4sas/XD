@@ -1,1 +1,2 @@
-XD usr/bin
+debian/tmp/usr/bin/* usr/bin
+contrib/apparmor/usr.bin.XD etc/apparmor.d

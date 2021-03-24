@@ -1,8 +1,12 @@
 *~
 *\#*
 
-# assets file is generated
-lib/rpc/assets/assets.go
+# assets files
+lib/rpc/assets/favicon.png
+lib/rpc/assets/index.html
+lib/rpc/assets/xd.css
+lib/rpc/assets/xd.min.js
+
 XD-*
 build-assets
 *.ini

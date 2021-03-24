@@ -1,15 +1,19 @@
 #!/usr/bin/make -f
-# See debhelper(7) (uncomment to enable)
-# output every command that modifies files on the build system.
-#export DH_VERBOSE = 1
+# -*- makefile -*-
 
-PREFIX=/usr
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+export DH_OPTIONS
+
+export DH_GOPKG := github.com/majestrate/XD
 
 %:
-	dh $@
+	dh $@ --buildsystem=golang --with=golang
+	dh_apparmor --profile-name=usr.bin.XD -pxd
 
 override_dh_auto_install:
-	mkdir -p debian/xd/etc/apparmor.d
-	cp contrib/apparmor/usr.bin.XD debian/xd/etc/apparmor.d/usr.bin.XD
-	dh_apparmor --profile-name=usr.bin.XD -pxd
-	dh_auto_install
+	dh_auto_install --destdir=debian/tmp
+
+override_dh_auto_test:
+
